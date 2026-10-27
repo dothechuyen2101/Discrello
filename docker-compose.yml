@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    image: discrello:latest
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: '3000'
+      HOST: 0.0.0.0
+    ports:
+      # Reachable only from the VPS itself. The host's nginx proxies the public domain to it
+      # (see deploy/nginx/discrello.conf.template and deploy/setup-nginx.sh).
+      - '127.0.0.1:${DISCRELLO_PORT:-3100}:3000'
+    restart: unless-stopped
+    # The VPS also runs other production services: keep logs and memory bounded.
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
+    # No data volume on purpose: all state lives in Supabase (DATABASE_URL).

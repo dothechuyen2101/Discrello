@@ -1,0 +1,32 @@
+{
+  "name": "discrello",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel -r --filter @discrello/server --filter @discrello/web run dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "db:generate": "pnpm --filter @discrello/server db:generate",
+    "db:migrate": "pnpm --filter @discrello/server db:migrate",
+    "seed:sports": "pnpm --filter @discrello/server seed:sports",
+    "e2e:demo": "node scripts/e2e-demo.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3",
+    "puppeteer-core": "^25.12.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS" },
+  "action": {
+    "id": "64a1b2c3d4e5f60718293a4f",
+    "data": {
+      "card": { "id": "64a00000000000000000c003", "name": "NFL Week 3 recap", "idShort": 44, "shortLink": "CoPyCaRd" },
+      "cardSource": { "id": "64a00000000000000000c001", "name": "NFL Week 3 recap", "idShort": 42, "shortLink": "AbCdEf12" },
+      "list": { "id": "64a00000000000000000a001", "name": "Script Writer Ready" },
+      "board": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS", "shortLink": "BoArD123" }
+    },
+    "type": "copyCard",
+    "date": "2026-09-24T01:06:00.000Z"
+  }
+}

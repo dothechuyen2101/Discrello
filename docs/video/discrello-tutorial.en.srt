@@ -1,0 +1,219 @@
+1
+00:00:00,350 --> 00:00:01,543
+Welcome to Discrello.
+
+2
+00:00:01,543 --> 00:00:06,143
+In the next few minutes, you will learn how to connect a Trello board to Discord,
+
+3
+00:00:06,143 --> 00:00:10,006
+so the right person is pinged the moment a card lands in their list.
+
+4
+00:00:11,017 --> 00:00:12,115
+Here is the idea.
+
+5
+00:00:12,115 --> 00:00:17,609
+Each Trello list is a stage owned by a role, like script writer, editor, or uploader.
+
+6
+00:00:17,609 --> 00:00:20,065
+When someone moves a card into a list,
+
+7
+00:00:20,065 --> 00:00:25,817
+Discrello posts a message in Discord that mentions the person responsible for that stage,
+
+8
+00:00:25,817 --> 00:00:27,044
+and names the card.
+
+9
+00:00:28,050 --> 00:00:32,541
+Open Discrello in your browser, and sign in with the admin password.
+
+10
+00:00:33,550 --> 00:00:35,858
+First, connect your Discord server.
+
+11
+00:00:35,858 --> 00:00:41,333
+After inviting the Discrello bot to the server, open Servers, and click Add server.
+
+12
+00:00:41,333 --> 00:00:43,311
+Pick the server from the list.
+
+13
+00:00:43,311 --> 00:00:47,796
+You can also add an alert channel, where Discrello reports problems.
+
+14
+00:00:47,796 --> 00:00:50,038
+Save, and the server shows bot OK.
+
+15
+00:00:51,083 --> 00:00:52,208
+Next, open Roles.
+
+16
+00:00:52,208 --> 00:00:54,524
+A role is a stage in your pipeline.
+
+17
+00:00:54,524 --> 00:01:00,082
+Click New role, enter a short key and a display name, and write the default message.
+
+18
+00:01:00,082 --> 00:01:04,648
+Placeholders like mention and card title are filled in automatically.
+
+19
+00:01:05,683 --> 00:01:08,443
+Now choose who gets pinged for this role.
+
+20
+00:01:08,443 --> 00:01:12,415
+Expand the role, and pick a Discord user or a Discord role.
+
+21
+00:01:12,415 --> 00:01:15,376
+Discrello checks with Discord before saving.
+
+22
+00:01:15,376 --> 00:01:19,886
+This role is not mentionable, so nobody would actually be notified.
+
+23
+00:01:19,886 --> 00:01:23,925
+The save is refused, and the message explains how to fix it.
+
+24
+00:01:24,950 --> 00:01:28,453
+Pick a target that works, such as a team member, and save.
+
+25
+00:01:28,453 --> 00:01:32,922
+Then send a test ping, to confirm that the mention really reaches someone.
+
+26
+00:01:33,950 --> 00:01:35,698
+Now connect a Trello board.
+
+27
+00:01:35,698 --> 00:01:37,835
+Open Boards, and click Add board.
+
+28
+00:01:37,835 --> 00:01:40,619
+Paste the board's address, and click Fetch.
+
+29
+00:01:40,619 --> 00:01:45,735
+Choose the Discord server and the channel for the pings, then create the board.
+
+30
+00:01:45,735 --> 00:01:48,778
+Discrello registers the Trello webhook for you.
+
+31
+00:01:49,783 --> 00:01:52,052
+Every list on the board appears here.
+
+32
+00:01:52,052 --> 00:01:54,443
+Choose the role responsible for a list.
+
+33
+00:01:54,443 --> 00:01:57,509
+The message is pre-filled from the role's default,
+
+34
+00:01:57,509 --> 00:02:00,575
+and the preview shows exactly what will be posted.
+
+35
+00:02:00,575 --> 00:02:04,683
+Click Map list to save, and repeat for each stage of your pipeline.
+
+36
+00:02:05,717 --> 00:02:09,581
+Use Send test, to post a sample message to the real channel.
+
+37
+00:02:10,617 --> 00:02:11,935
+That is all the setup.
+
+38
+00:02:11,935 --> 00:02:15,409
+From now on, when someone moves a card into a mapped list,
+
+39
+00:02:15,409 --> 00:02:17,985
+the ping arrives in Discord within seconds.
+
+40
+00:02:19,017 --> 00:02:22,356
+Open Notifications, to see everything Discrello sent:
+
+41
+00:02:22,356 --> 00:02:25,191
+the card, the list, the role, and the status.
+
+42
+00:02:25,191 --> 00:02:27,774
+Sent means Discord confirmed the mention.
+
+43
+00:02:27,774 --> 00:02:30,609
+If a message fails, the reason is shown here,
+
+44
+00:02:30,609 --> 00:02:33,570
+and you can retry it once the problem is fixed.
+
+45
+00:02:34,617 --> 00:02:37,641
+The Webhook events tab answers the question:
+
+46
+00:02:37,641 --> 00:02:38,947
+why didn't it ping?
+
+47
+00:02:38,947 --> 00:02:41,489
+Every delivery from Trello is listed.
+
+48
+00:02:41,489 --> 00:02:46,163
+Here, a card moved into a list with no mapping, so nothing was sent.
+
+49
+00:02:47,183 --> 00:02:50,973
+Finally, Settings shows whether Trello and Discord are connected,
+
+50
+00:02:50,973 --> 00:02:53,306
+and lets you change the default message.
+
+51
+00:02:53,306 --> 00:02:56,396
+Discrello re-checks your setup every fifteen minutes,
+
+52
+00:02:56,396 --> 00:02:59,486
+and warns your alert channel if a permission changes.
+
+53
+00:03:00,517 --> 00:03:01,761
+That is Discrello.
+
+54
+00:03:01,761 --> 00:03:05,631
+For more details, see the user guide in the docs folder.
+
+55
+00:03:05,631 --> 00:03:07,013
+Thanks for watching!

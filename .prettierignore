@@ -1,0 +1,6 @@
+node_modules
+dist
+pnpm-lock.yaml
+packages/server/drizzle
+scripts/tutorial-video/out
+scripts/tutorial-video/piper

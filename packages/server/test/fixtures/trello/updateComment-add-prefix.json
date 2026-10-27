@@ -1,0 +1,16 @@
+{
+  "model": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS" },
+  "action": {
+    "id": "64a1b2c3d4e5f60718293a61",
+    "idMemberCreator": "5a1b2c3d4e5f60718293a4b6",
+    "data": {
+      "action": { "id": "64a1b2c3d4e5f60718293a53", "text": "Comment: Looks good, but fix the score" },
+      "card": { "id": "64a00000000000000000c001", "name": "NFL Week 3 recap", "idShort": 42, "shortLink": "AbCdEf12" },
+      "board": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS", "shortLink": "BoArD123" },
+      "old": { "text": "Looks good" }
+    },
+    "type": "updateComment",
+    "date": "2026-10-11T01:12:00.000Z",
+    "memberCreator": { "id": "5a1b2c3d4e5f60718293a4b6", "username": "qcmike", "fullName": "Mike QC" }
+  }
+}

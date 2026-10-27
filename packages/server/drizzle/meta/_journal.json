@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790213999631,
+      "tag": "0000_loud_exodus",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791712499148,
+      "tag": "0001_revision_comments",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791771576388,
+      "tag": "0002_teams",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791771586999,
+      "tag": "0003_notification_mentions",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792324830935,
+      "tag": "0004_team_channels_feedback_recipient",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "model": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS" },
+  "action": {
+    "id": "64a1b2c3d4e5f60718293a50",
+    "data": {
+      "card": { "id": "64a00000000000000000c004", "name": "Imported card", "idShort": 45, "shortLink": "MoVeDiN1" },
+      "list": { "id": "64a00000000000000000a002", "name": "NFL editor ready" },
+      "board": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS", "shortLink": "BoArD123" },
+      "boardSource": { "id": "5f1a2b3c4d5e6f7a8b9c0d2f", "name": "OTHER" }
+    },
+    "type": "moveCardToBoard",
+    "date": "2026-09-24T01:07:00.000Z",
+    "memberCreator": { "id": "5a1b2c3d4e5f60718293a4b5", "username": "jane", "fullName": "Jane Doe" }
+  }
+}

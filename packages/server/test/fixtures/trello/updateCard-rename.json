@@ -1,0 +1,15 @@
+{
+  "model": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS" },
+  "action": {
+    "id": "64a1b2c3d4e5f60718293a4c",
+    "data": {
+      "card": { "id": "64a00000000000000000c001", "name": "NFL Week 3 recap (final)", "idShort": 42, "shortLink": "AbCdEf12" },
+      "old": { "name": "NFL Week 3 recap" },
+      "board": { "id": "5f1a2b3c4d5e6f7a8b9c0d1e", "name": "SPORTS", "shortLink": "BoArD123" },
+      "list": { "id": "64a00000000000000000a002", "name": "NFL editor ready" }
+    },
+    "type": "updateCard",
+    "date": "2026-09-24T01:03:00.000Z",
+    "memberCreator": { "id": "5a1b2c3d4e5f60718293a4b5", "username": "jane", "fullName": "Jane Doe" }
+  }
+}

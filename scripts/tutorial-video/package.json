@@ -1,0 +1,13 @@
+{
+  "name": "discrello-tutorial-video",
+  "private": true,
+  "type": "module",
+  "description": "Regenerates docs/video/discrello-tutorial.en.mp4 from the demo server",
+  "scripts": {
+    "build-video": "node make-video.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "puppeteer-core": "^25.12.0"
+  }
+}

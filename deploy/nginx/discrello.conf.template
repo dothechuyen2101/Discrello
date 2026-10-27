@@ -1,0 +1,30 @@
+# Discrello — dedicated nginx server block.
+#
+# Rendered by deploy/setup-nginx.sh, which replaces __DOMAIN__ and __PORT__ and then runs
+# `certbot --nginx`, which adds the HTTPS (443) listener and the HTTP→HTTPS redirect to this block.
+# Other sites on the server (e.g. the scraper) are not touched.
+server {
+    listen 80;
+    server_name __DOMAIN__;
+
+    # Trello webhook payloads and admin API requests are small.
+    client_max_body_size 2m;
+
+    location / {
+        # The Discrello container listens on 127.0.0.1 only (docker-compose.yml).
+        proxy_pass http://127.0.0.1:__PORT__;
+        proxy_http_version 1.1;
+
+        # The app trusts these headers (Fastify trustProxy) for client IPs, rate limits and
+        # secure cookies. The request body is passed through untouched, which the Trello
+        # signature check requires.
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
+
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 60s;
+    }
+}
